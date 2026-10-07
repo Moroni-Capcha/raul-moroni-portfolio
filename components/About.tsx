@@ -88,11 +88,11 @@ export default function About() {
               <div className="w-full aspect-[4/5] bg-surface-container rounded-lg overflow-hidden relative">
                 <div className="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent z-10 opacity-70" />
                 <Image
-                  src="/images/about-workspace.png"
-                  alt="Espacio de trabajo minimalista de Raúl Moroni"
+                  src="/images/foto1.jpeg"
+                  alt="Retrato de Raúl Moroni, desarrollador frontend, con lentes y polo oscuro sobre fondo azul"
                   fill
                   sizes="(min-width: 768px) 40vw, 100vw"
-                  className="object-cover transition-transform duration-700 group-hover:scale-105 filter contrast-105"
+                  className="object-cover object-[50%_30%] transition-transform duration-700 group-hover:scale-105 filter contrast-105"
                 />
                 
                 {/* Floating badge inside image */}

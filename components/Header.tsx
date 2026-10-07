@@ -60,11 +60,12 @@ export default function Header() {
           
           <div className="relative">
             <Image
-              src="/images/moro1.png"
+              src="/images/foto1.jpeg"
               alt="Foto de perfil de Raúl Moroni"
               width={38}
               height={38}
-              className="w-9 h-9 rounded-full border border-primary/40 object-cover p-0.5 bg-surface-container shadow-[0_0_10px_rgba(155,17,30,0.3)]"
+              sizes="38px"
+              className="w-9 h-9 rounded-full border border-primary/40 object-cover object-[50%_35%] p-0.5 bg-surface-container shadow-[0_0_10px_rgba(155,17,30,0.3)]"
             />
             <span className="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-emerald-500 border-2 border-background" title="Online" />
           </div>
