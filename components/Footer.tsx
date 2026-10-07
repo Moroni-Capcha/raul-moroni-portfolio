@@ -30,7 +30,7 @@ export default function Footer() {
             LinkedIn
           </a>
           <a
-            href="https://github.com/Moroni-cc"
+            href="https://github.com/Moroni-Capcha"
             target="_blank"
             rel="noopener noreferrer"
             className="text-on-surface-variant/70 hover:text-primary transition-colors font-label text-xs uppercase tracking-widest"

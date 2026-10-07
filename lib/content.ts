@@ -37,7 +37,7 @@ export const projects: Project[] = [
       "Captura de pantalla de Windbnb, una aplicación de reservas de alojamiento con diseño minimalista en modo oscuro.",
     tags: ["Vanilla JS", "Vite", "Tailwind", "Vercel"],
     demoUrl: "https://windbnb-orcin-nu.vercel.app/",
-    codeUrl: "https://github.com/Moroni-cc/Windbnb",
+    codeUrl: "https://github.com/Moroni-Capcha/Windbnb",
   },
   {
     id: "moodbeats",
@@ -48,8 +48,8 @@ export const projects: Project[] = [
     imageAlt:
       "Captura de pantalla de Moodbeats, una interfaz de streaming de música en modo oscuro con visualizaciones de datos.",
     tags: ["JavaScript", "REST APIs", "CSS3"],
-    demoUrl: "https://moroni-cc.github.io/moodbeats/",
-    codeUrl: "https://github.com/Moroni-cc/moodbeats",
+    demoUrl: "https://moroni-capcha.github.io/moodbeats/",
+    codeUrl: "https://github.com/Moroni-Capcha/moodbeats",
   },
   {
     id: "SGH-funval",
@@ -61,7 +61,7 @@ export const projects: Project[] = [
       "Dashboard de SGH-funval",
     tags: ["React 19", "Vite", "Tailwind CSS", "React Router DOM", "Axios", "Lucide React"],
     demoUrl: "https://sgh-funval.vercel.app/login",
-    codeUrl: "https://github.com/Moroni-cc/SGH-funval",
+    codeUrl: "https://github.com/Moroni-Capcha/SGH-funval",
     featured: true,
   },
 ];
@@ -69,5 +69,5 @@ export const projects: Project[] = [
 export const contactChannels: ContactChannel[] = [
   { icon: "mail", label: "raulmoronicapchacadillo@gmail.com", href: "mailto:raulmoronicapchacadillo@gmail.com" },
   { icon: "briefcase", label: "LinkedIn Profile", href: "https://www.linkedin.com/in/ra%C3%BAl-moroni-capcha-cadillo-659a41341/" },
-  { icon: "code", label: "GitHub Repositories", href: "https://github.com/Moroni-cc" },
+  { icon: "code", label: "GitHub Repositories", href: "https://github.com/Moroni-Capcha" },
 ];
