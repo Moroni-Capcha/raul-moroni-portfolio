@@ -68,7 +68,7 @@ export const projects: Project[] = [
     id: "el-rico-sanguchon",
     title: "El Rico Sanguchón",
     description:
-      "Kiosko táctil de autoservicio para un restaurante: catálogo, carrito, pago y ticket, con soporte de idiomas.",
+      "Kiosko táctil de autoservicio para un restaurante peruano: menú por categorías, personalizador de pedido, carrito y pago.",
     tags: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
     demoUrl: "https://el-rico-sanguchon.vercel.app",
     codeUrl: "https://github.com/Moroni-Capcha/el-rico-sanguchon",
@@ -77,7 +77,7 @@ export const projects: Project[] = [
     id: "galaxia-x3",
     title: "Galaxia X3",
     description:
-      "Juego educativo espacial para practicar las tablas del 2 al 10, con modo solitario, duelos y batalla contra jefe.",
+      "Juego espacial para practicar multiplicación y división (tablas del 2 al 10), con duelo de 2 jugadores y jefe final.",
     tags: ["React", "TypeScript", "Vite", "Tailwind CSS"],
     demoUrl: "https://galaxia-x3.vercel.app",
     codeUrl: "https://github.com/Moroni-Capcha/Galaxia-X3",
