@@ -31,7 +31,7 @@ export const projects: Project[] = [
     id: "windbnb",
     title: "Windbnb",
     description:
-      "Una aplicación de búsqueda de alojamientos inspirada en Airbnb, construida con enfoque en el rendimiento y una interfaz de usuario fluida.",
+      "Buscador de alojamientos inspirado en Airbnb, con enfoque en rendimiento y una interfaz fluida.",
     image: "/images/projects/windbnb.jpg",
     imageAlt:
       "Captura de pantalla de Windbnb, una aplicación de reservas de alojamiento con diseño minimalista en modo oscuro.",
@@ -43,7 +43,7 @@ export const projects: Project[] = [
     id: "moodbeats",
     title: "Moodbeats",
     description:
-      "Plataforma de recomendación musical basada en estados de ánimo, integrando múltiples APIs REST para ofrecer una experiencia auditiva personalizada.",
+      "Recomendador musical según tu estado de ánimo, integrando varias APIs REST para una experiencia auditiva personalizada.",
     image: "/images/projects/moodbeats.jpg",
     imageAlt:
       "Captura de pantalla de Moodbeats, una interfaz de streaming de música en modo oscuro con visualizaciones de datos.",
@@ -68,7 +68,7 @@ export const projects: Project[] = [
     id: "el-rico-sanguchon",
     title: "El Rico Sanguchón",
     description:
-      "Kiosko táctil de autoservicio para un restaurante: catálogo de productos, carrito, pago y ticket, con soporte de idiomas y una vista para cuando el local está cerrado.",
+      "Kiosko táctil de autoservicio para un restaurante: catálogo, carrito, pago y ticket, con soporte de idiomas.",
     tags: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
     demoUrl: "https://el-rico-sanguchon.vercel.app",
     codeUrl: "https://github.com/Moroni-Capcha/el-rico-sanguchon",
@@ -77,7 +77,7 @@ export const projects: Project[] = [
     id: "galaxia-x3",
     title: "Galaxia X3",
     description:
-      "Juego educativo espacial para practicar las tablas de multiplicar del 2 al 10, con sectores por explorar, modo solitario, duelos y batalla contra jefe.",
+      "Juego educativo espacial para practicar las tablas del 2 al 10, con modo solitario, duelos y batalla contra jefe.",
     tags: ["React", "TypeScript", "Vite", "Tailwind CSS"],
     demoUrl: "https://galaxia-x3.vercel.app",
     codeUrl: "https://github.com/Moroni-Capcha/Galaxia-X3",
@@ -86,25 +86,16 @@ export const projects: Project[] = [
     id: "sumas-razonando",
     title: "Sumas Razonando",
     description:
-      "Aplicación educativa interactiva para aprender a razonar las sumas: guía paso a paso, árbol de descomposición, ejemplos, niveles de juego y hojas de práctica.",
+      "App educativa para razonar las sumas: guía paso a paso, árbol de descomposición, niveles de juego y hojas de práctica.",
     tags: ["React", "TypeScript", "Vite", "Tailwind CSS"],
     demoUrl: "https://sumas-razonando.vercel.app",
     codeUrl: "https://github.com/Moroni-Capcha/sumas-razonando",
   },
   {
-    id: "einng-port",
-    title: "Einng!",
-    description:
-      "Sitio web de una consultora de innovación estratégica, con secciones de contenido sobre innovación y página de contacto.",
-    tags: ["React", "TypeScript", "Vite", "Tailwind CSS", "GSAP"],
-    demoUrl: "https://einng-port.vercel.app",
-    codeUrl: "https://github.com/Moroni-Capcha/Einng-port",
-  },
-  {
     id: "cae-liahona",
     title: "CAE-LIAHONA",
     description:
-      "Sitio institucional para una academia de asesoría educativa: landing de varias secciones (servicios, sobre nosotros, blog) con contacto directo por WhatsApp.",
+      "Sitio institucional para una academia de asesoría educativa: servicios, nosotros, blog y contacto por WhatsApp.",
     tags: ["React", "Vite", "React Router", "Tailwind CSS"],
     demoUrl: "https://cae-liahona.vercel.app",
     codeUrl: "https://github.com/Moroni-Capcha/cae-liahona",
