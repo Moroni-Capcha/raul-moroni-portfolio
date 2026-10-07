@@ -131,7 +131,7 @@ function FeaturedProjectCard({ project }: { project: Project }) {
 
         <div className="pt-4 border-t border-white/5 flex items-center justify-between">
           <ProjectActions project={project} />
-          <span className="font-label text-[10px] text-on-surface-variant/40 uppercase tracking-widest">
+          <span className="hidden sm:inline font-label text-[10px] text-on-surface-variant/40 uppercase tracking-widest">
             Production Ready
           </span>
         </div>
