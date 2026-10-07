@@ -1,67 +1,38 @@
 # Raúl Moroni — Portfolio
 
-Reconstrucción del diseño "Crimson Nocturne" (el que subiste en el zip de Stitch)
-como una app Next.js modular, con TypeScript y Tailwind CSS v4.
+Portafolio personal con el diseño "Crimson Nocturne", construido con Next.js 15 (App Router), React 19, TypeScript, Tailwind CSS v4 y GSAP.
+
+Sitio en vivo: https://raul-moroni-portfolio.vercel.app
 
 ## Estructura
 
 ```
 app/
-  layout.tsx        Fuentes (Playfair Display, Hanken Grotesk, Geist) + metadata
-  page.tsx           Compone todas las secciones
-  globals.css         Tokens de diseño Tailwind v4 (@theme) — colores, tipografía, espaciado
-components/
-  Header.tsx          Nav fija + menú móvil (client component)
-  Hero.tsx
-  About.tsx
-  Skills.tsx          + SkillCard interno
-  Projects.tsx        + ProjectCard / FeaturedProjectCard / TagList internos
-  Contact.tsx         Lista de canales de contacto
-  ContactForm.tsx      Formulario controlado (client component)
-  Footer.tsx
-lib/
-  content.ts          Toda la copy (nav, skills, proyectos, contacto) — edítalo aquí
-types/
-  index.ts             Interfaces compartidas
+  layout.tsx        Fuentes, metadata (SEO / Open Graph) y fondo global
+  page.tsx          Compone todas las secciones
+  globals.css       Tokens de diseño Tailwind v4 (@theme) y utilidades
+components/         Una sección por componente (Hero, About, Skills, Projects, Contact...)
+lib/content.ts      Toda la copy: navegación, skills, proyectos y contacto
+types/index.ts      Interfaces compartidas
+public/images/      Foto, video del avatar y capturas de proyectos
 ```
 
 ## Cómo correrlo
 
+Este repo usa `pnpm`; no mezcles `npm`/`yarn`.
+
 ```bash
-# usando pnpm (gestor recomendado para este repo)
 pnpm install
-pnpm run dev
+pnpm run dev     # http://localhost:3000
+pnpm run build
+pnpm run lint
 ```
 
-Abre http://localhost:3000
+## Agregar un proyecto
 
-Nota: este repositorio usa `pnpm`. Elimina `package-lock.json` si existe y
-no mezcles `npm`/`yarn` con `pnpm` para evitar conflictos de lockfile.
-
-## Imágenes pendientes
-
-El HTML original usaba URLs temporales de `lh3.googleusercontent.com` (Stitch/Google).
-Coloca tus propias imágenes en `public/images/`:
-
-- `public/images/logo.svg`
-- `public/images/avatar.jpg`
-- `public/images/hero-bg.jpg`
-- `public/images/about-workspace.jpg`
-- `public/images/projects/windbnb.jpg`
-- `public/images/projects/moodbeats.jpg`
-- `public/images/projects/sleepoutside.jpg`
-
-Y el CV en `public/cv-raul-moroni.pdf`.
-
-Si prefieres seguir usando imágenes remotas, agrega el dominio en
-`next.config.ts` → `images.remotePatterns`.
+1. Agrega una entrada en `projects` dentro de `lib/content.ts` (`image` es opcional; sin imagen se muestra una portada tipográfica).
+2. Guarda la captura en `public/images/projects/` (16:9, unos 1280×720, JPEG liviano).
 
 ## Notas de diseño
 
-Los tokens (colores, tipografía, spacing) viven en `app/globals.css` bajo `@theme`,
-siguiendo la sintaxis nativa de Tailwind v4 (sin `tailwind.config.js`). Así generas
-clases como `bg-primary-container`, `text-on-surface-variant`, `font-display`, etc.,
-directamente desde las variables del design system "Crimson Nocturne".
-
-Los íconos de Material Symbols del HTML original se reemplazaron por `lucide-react`
-(`Mail`, `Code2`, `Eye`, `Send`, `ArrowRight`, `Menu`, `X`, `Layers`, `Wrench`).
+Los tokens (colores, tipografía, espaciado) viven en `app/globals.css` bajo `@theme`, sin `tailwind.config.js`. Así se generan clases como `bg-primary-container`, `text-on-surface-variant` o `font-display`.
