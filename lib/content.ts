@@ -64,6 +64,51 @@ export const projects: Project[] = [
     codeUrl: "https://github.com/Moroni-Capcha/SGH-funval",
     featured: true,
   },
+  {
+    id: "el-rico-sanguchon",
+    title: "El Rico Sanguchón",
+    description:
+      "Kiosko táctil de autoservicio para un restaurante: catálogo de productos, carrito, pago y ticket, con soporte de idiomas y una vista para cuando el local está cerrado.",
+    tags: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
+    demoUrl: "https://el-rico-sanguchon.vercel.app",
+    codeUrl: "https://github.com/Moroni-Capcha/el-rico-sanguchon",
+  },
+  {
+    id: "galaxia-x3",
+    title: "Galaxia X3",
+    description:
+      "Juego educativo espacial para practicar las tablas de multiplicar del 2 al 10, con sectores por explorar, modo solitario, duelos y batalla contra jefe.",
+    tags: ["React", "TypeScript", "Vite", "Tailwind CSS"],
+    demoUrl: "https://galaxia-x3.vercel.app",
+    codeUrl: "https://github.com/Moroni-Capcha/Galaxia-X3",
+  },
+  {
+    id: "sumas-razonando",
+    title: "Sumas Razonando",
+    description:
+      "Aplicación educativa interactiva para aprender a razonar las sumas: guía paso a paso, árbol de descomposición, ejemplos, niveles de juego y hojas de práctica.",
+    tags: ["React", "TypeScript", "Vite", "Tailwind CSS"],
+    demoUrl: "https://sumas-razonando.vercel.app",
+    codeUrl: "https://github.com/Moroni-Capcha/sumas-razonando",
+  },
+  {
+    id: "einng-port",
+    title: "Einng!",
+    description:
+      "Sitio web de una consultora de innovación estratégica, con secciones de contenido sobre innovación y página de contacto.",
+    tags: ["React", "TypeScript", "Vite", "Tailwind CSS", "GSAP"],
+    demoUrl: "https://einng-port.vercel.app",
+    codeUrl: "https://github.com/Moroni-Capcha/Einng-port",
+  },
+  {
+    id: "cae-liahona",
+    title: "CAE-LIAHONA",
+    description:
+      "Sitio institucional para una academia de asesoría educativa: landing de varias secciones (servicios, sobre nosotros, blog) con contacto directo por WhatsApp.",
+    tags: ["React", "Vite", "React Router", "Tailwind CSS"],
+    demoUrl: "https://cae-liahona.vercel.app",
+    codeUrl: "https://github.com/Moroni-Capcha/cae-liahona",
+  },
 ];
 
 export const contactChannels: ContactChannel[] = [
