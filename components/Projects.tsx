@@ -28,6 +28,43 @@ function TagList({ tags }: { tags: string[] }) {
   );
 }
 
+function ProjectCover({ project, sizes }: { project: Project; sizes: string }) {
+  if (project.image) {
+    return (
+      <Image
+        src={project.image}
+        alt={project.imageAlt ?? `Vista previa de ${project.title}`}
+        fill
+        sizes={sizes}
+        className="object-cover transform group-hover:scale-105 transition-transform duration-700 filter contrast-105"
+      />
+    );
+  }
+
+  // Typographic fallback for projects without a screenshot.
+  return (
+    <div
+      className="absolute inset-0 flex items-center justify-center overflow-hidden bg-gradient-to-br from-primary-container/40 via-surface-container to-surface-container-lowest"
+      role="img"
+      aria-label={`Portada tipográfica de ${project.title}`}
+    >
+      <div
+        className="absolute -top-1/3 -right-1/4 w-3/4 aspect-square rounded-full bg-primary/15 blur-3xl"
+        aria-hidden="true"
+      />
+      <span
+        className="font-display font-bold italic text-on-surface/10 text-[7rem] leading-none select-none transition-transform duration-700 group-hover:scale-110"
+        aria-hidden="true"
+      >
+        {project.title.charAt(0)}
+      </span>
+      <span className="absolute bottom-4 left-4 right-4 font-display text-lg text-on-surface/80 truncate">
+        {project.title}
+      </span>
+    </div>
+  );
+}
+
 function ProjectActions({ project }: { project: Project }) {
   return (
     <div className="flex items-center gap-3">
@@ -66,13 +103,7 @@ function FeaturedProjectCard({ project }: { project: Project }) {
       className="group relative flex flex-col lg:flex-row bg-surface-container-low/90 rounded-2xl overflow-hidden border border-primary/30 transition-all duration-500 hover:border-primary shadow-[0_10px_40px_rgba(155,17,30,0.15)]"
     >
       <div className="w-full lg:w-3/5 aspect-video lg:aspect-auto min-h-[320px] overflow-hidden relative bg-surface-container-highest">
-        <Image
-          src={project.image}
-          alt={project.imageAlt}
-          fill
-          sizes="(min-width: 1024px) 60vw, 100vw"
-          className="object-cover transform group-hover:scale-105 transition-transform duration-700 filter contrast-105"
-        />
+        <ProjectCover project={project} sizes="(min-width: 1024px) 60vw, 100vw" />
         <div className="absolute inset-0 bg-gradient-to-t lg:bg-gradient-to-r from-background/90 via-transparent to-transparent z-10 pointer-events-none" />
         
         {/* Featured Tag Badge */}
@@ -100,7 +131,7 @@ function FeaturedProjectCard({ project }: { project: Project }) {
 
         <div className="pt-4 border-t border-white/5 flex items-center justify-between">
           <ProjectActions project={project} />
-          <span className="font-label text-[10px] text-on-surface-variant/40 uppercase tracking-widest">
+          <span className="hidden sm:inline font-label text-[10px] text-on-surface-variant/40 uppercase tracking-widest">
             Production Ready
           </span>
         </div>
@@ -117,13 +148,7 @@ function ProjectCard({ project }: { project: Project }) {
     >
       <div className="p-6 pb-0">
         <div className="w-full aspect-video mb-5 overflow-hidden rounded-xl bg-surface-container-highest relative border border-white/5">
-          <Image
-            src={project.image}
-            alt={project.imageAlt}
-            fill
-            sizes="(min-width: 768px) 50vw, 100vw"
-            className="object-cover transform group-hover:scale-105 transition-transform duration-700"
-          />
+          <ProjectCover project={project} sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw" />
           <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent z-10 pointer-events-none" />
         </div>
 
@@ -186,7 +211,7 @@ export default function Projects() {
             y: 0,
             scale: 1,
             duration: 0.85,
-            stagger: 0.2,
+            stagger: 0.12,
             ease: "power3.out",
             scrollTrigger: {
               trigger: containerRef.current,
@@ -231,11 +256,24 @@ export default function Projects() {
           ))}
 
           {/* Standard items in grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {standard.map((project) => (
               <ProjectCard key={project.id} project={project} />
             ))}
           </div>
+        </div>
+
+        <div className="mt-14 flex justify-center">
+          <a
+            href="https://github.com/Moroni-Capcha"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-md bg-surface-container border border-primary/30 text-on-surface font-label text-xs uppercase tracking-widest transition-all duration-300 hover:bg-primary hover:text-on-primary hover:shadow-[0_0_20px_rgba(255,77,90,0.3)]"
+          >
+            <Github size={14} aria-hidden="true" />
+            <span>Ver todos mis repositorios en GitHub</span>
+            <ExternalLink size={13} aria-hidden="true" />
+          </a>
         </div>
       </div>
     </section>

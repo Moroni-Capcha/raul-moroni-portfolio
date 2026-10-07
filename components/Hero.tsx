@@ -189,8 +189,10 @@ export default function Hero() {
                 muted
                 loop
                 playsInline
+                preload="metadata"
+                poster="/images/avatar-hero-poster.jpg"
               >
-                <source src="/images/avatar1.mp4" type="video/mp4" />
+                <source src="/images/avatar-hero.mp4" type="video/mp4" />
                 Tu navegador no soporta video MP4.
               </video>
               
@@ -206,7 +208,7 @@ export default function Hero() {
                   </span>
                   <div className="flex flex-col">
                     <span className="font-display font-bold text-xs text-on-surface">Moroni Capcha</span>
-                    <span className="font-label text-[9px] text-primary uppercase tracking-wider">Interactive Avatar</span>
+                    <span className="font-label text-[9px] text-primary uppercase tracking-wider">Frontend Developer</span>
                   </div>
                 </div>
                 <div className="p-1.5 rounded-lg bg-surface-container border border-white/5 text-primary">

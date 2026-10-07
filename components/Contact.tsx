@@ -101,10 +101,10 @@ export default function Contact() {
                       rel="noopener noreferrer"
                       className="flex items-center gap-4 p-3.5 rounded-xl bg-surface-container-low border border-white/5 hover:border-primary/40 hover:bg-surface-container transition-all group w-full sm:w-fit"
                     >
-                      <span className="w-10 h-10 rounded-lg bg-surface-container-high border border-white/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-all shadow-[0_0_10px_rgba(255,77,90,0.15)]">
+                      <span className="shrink-0 w-10 h-10 rounded-lg bg-surface-container-high border border-white/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-all shadow-[0_0_10px_rgba(255,77,90,0.15)]">
                         <Icon size={18} aria-hidden="true" />
                       </span>
-                      <span className="font-label text-xs uppercase tracking-wider text-on-surface-variant group-hover:text-primary transition-colors">
+                      <span className="min-w-0 break-all sm:break-normal font-label text-xs uppercase tracking-wider text-on-surface-variant group-hover:text-primary transition-colors">
                         {channel.label}
                       </span>
                     </a>
