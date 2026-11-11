@@ -86,7 +86,7 @@ export default function Skills() {
           scrollTrigger: {
             trigger: sectionRef.current,
             start: "top 80%",
-            toggleActions: "play none none reverse",
+            toggleActions: "play none none none",
           },
         }
       );
@@ -107,7 +107,7 @@ export default function Skills() {
             scrollTrigger: {
               trigger: cardsContainerRef.current,
               start: "top 80%",
-              toggleActions: "play none none reverse",
+              toggleActions: "play none none none",
             },
           }
         );

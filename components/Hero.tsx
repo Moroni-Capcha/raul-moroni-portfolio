@@ -18,6 +18,7 @@ export default function Hero() {
   const ctaRef = useRef<HTMLDivElement>(null);
   const videoCardRef = useRef<HTMLDivElement>(null);
   const verticalLabelRef = useRef<HTMLDivElement>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
 
   useGSAP(
     () => {
@@ -25,7 +26,23 @@ export default function Hero() {
         "(prefers-reduced-motion: reduce)"
       ).matches;
 
-      if (prefersReducedMotion) return;
+      if (prefersReducedMotion) {
+        // Elements start hidden via CSS; reveal them without animating.
+        gsap.set(
+          [
+            badgeRef.current,
+            titleRef.current,
+            subtitleRef.current,
+            descRef.current,
+            videoCardRef.current,
+          ],
+          { opacity: 1 }
+        );
+        gsap.set(verticalLabelRef.current, { opacity: 0.7 });
+        // Keep the avatar as a still frame instead of a looping video.
+        videoRef.current?.pause();
+        return;
+      }
 
       const tl = gsap.timeline({
         defaults: { ease: "power3.out", duration: 1 },
@@ -80,7 +97,7 @@ export default function Hero() {
     <section
       id="home"
       ref={containerRef}
-      className="relative min-h-[92vh] flex flex-col justify-center max-w-full mx-auto px-5 lg:px-12 pt-24 pb-20 w-full overflow-hidden border-b border-white/5 bg-background"
+      className="relative min-h-[92vh] flex flex-col justify-center max-w-full mx-auto px-5 lg:px-6 pt-24 pb-20 w-full overflow-hidden border-b border-white/5 bg-background"
     >
       {/* Subtle Background Glows */}
       <div
@@ -184,6 +201,7 @@ export default function Hero() {
             
             <div className="w-full h-full rounded-xl overflow-hidden relative bg-surface-container-lowest border border-white/10">
               <video
+                ref={videoRef}
                 className="w-full h-full object-cover filter contrast-110 group-hover:scale-105 transition-transform duration-700"
                 autoPlay
                 muted
