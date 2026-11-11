@@ -36,7 +36,7 @@ function ProjectCover({ project, sizes }: { project: Project; sizes: string }) {
         alt={project.imageAlt ?? `Vista previa de ${project.title}`}
         fill
         sizes={sizes}
-        className="object-cover transform group-hover:scale-105 transition-transform duration-700 filter contrast-105"
+        className="object-cover object-top transform group-hover:scale-105 transition-transform duration-700 filter contrast-105"
       />
     );
   }
@@ -104,7 +104,7 @@ function FeaturedProjectCard({ project }: { project: Project }) {
     >
       <div className="w-full lg:w-3/5 aspect-video lg:aspect-auto min-h-[320px] overflow-hidden relative bg-surface-container-highest">
         <ProjectCover project={project} sizes="(min-width: 1024px) 60vw, 100vw" />
-        <div className="absolute inset-0 bg-gradient-to-t lg:bg-gradient-to-r from-background/90 via-transparent to-transparent z-10 pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-t lg:bg-gradient-to-l from-surface-container-low/70 via-transparent to-transparent z-10 pointer-events-none" />
         
         {/* Featured Tag Badge */}
         <div className="absolute top-4 left-4 z-20 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary text-on-primary font-label text-[10px] uppercase tracking-widest font-bold shadow-lg">
@@ -195,7 +195,7 @@ export default function Projects() {
           scrollTrigger: {
             trigger: sectionRef.current,
             start: "top 80%",
-            toggleActions: "play none none reverse",
+            toggleActions: "play none none none",
           },
         }
       );
@@ -216,7 +216,7 @@ export default function Projects() {
             scrollTrigger: {
               trigger: containerRef.current,
               start: "top 75%",
-              toggleActions: "play none none reverse",
+              toggleActions: "play none none none",
             },
           }
         );
