@@ -18,6 +18,7 @@ export default function Hero() {
   const ctaRef = useRef<HTMLDivElement>(null);
   const videoCardRef = useRef<HTMLDivElement>(null);
   const verticalLabelRef = useRef<HTMLDivElement>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
 
   useGSAP(
     () => {
@@ -38,6 +39,8 @@ export default function Hero() {
           { opacity: 1 }
         );
         gsap.set(verticalLabelRef.current, { opacity: 0.7 });
+        // Keep the avatar as a still frame instead of a looping video.
+        videoRef.current?.pause();
         return;
       }
 
@@ -198,6 +201,7 @@ export default function Hero() {
             
             <div className="w-full h-full rounded-xl overflow-hidden relative bg-surface-container-lowest border border-white/10">
               <video
+                ref={videoRef}
                 className="w-full h-full object-cover filter contrast-110 group-hover:scale-105 transition-transform duration-700"
                 autoPlay
                 muted
